@@ -56,20 +56,21 @@
     margin: 200px 50%;
 }
 
-.banner__button-style{
+.banner__button-style{ 
     background-color: #4CAF50;
     border: 1px solid black;
     border-radius: 9px;
-    color: white;
     width: 100px;
     height: 40px;
     transition-duration: 0.5s;
+    cursor: pointer;
 }
 .banner__button-style:hover{
     background-color: white;
     color: #4CAF50;
 }
-    
+
+
 
 .gradiente{
     display: flex;
