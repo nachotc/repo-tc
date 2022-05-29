@@ -14,10 +14,14 @@
 #header {
     position: sticky;
     z-index: 999;
+    top: 0; /*SE AGREGA TOP 0 PARA QUE SE MANTENGA AL SCROLLEAR */
     background: rgba(41, 41, 41, 0.6);
     display: flex;
     justify-content: space-between;
 }
+
+
+
 
 .header__nav{
     margin-right: 50px;
@@ -32,12 +36,17 @@
     display: inline-block;
     margin: 5px 0px 5px 0px;
     padding: 10px;
+    font-family: "Open Sans", Arial, sans-serif;
+    text-transform: uppercase;
     color: white;
 }
 
 .header__logo{
     margin: 5px 50px;
     padding: 10px;
+    font-family: "Open Sans", Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
     color: white;
     align-self: center;
 }
@@ -45,18 +54,91 @@
 .banner__button{
     position: absolute;
     margin: 200px 50%;
-    height: 50px;
-    width: 75px;
 }
+
+.banner__button-style{ 
+    background-color: #4CAF50;
+    border: 1px solid black;
+    border-radius: 9px;
+    width: 100px;
+    height: 40px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+.banner__button-style:hover{
+    background-color: white;
+    color: #4CAF50;
+}
+
 
 
 .gradiente{
     display: flex;
-    height: 100px;
+    height: 200px;
     justify-content: center;
     border: 2px solid black;
+    background-image: linear-gradient(73.1deg,  rgba(34,126,34,1) 8%, rgba(99,162,17,1) 86.9% );
 }
 
 .gradiente h2{
     align-self: center;
+    font-family: "Open Sans", Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+.animacion{
+    display: grid;
+    grid-template-columns:  50% 50%;
+    height: 600px;
+}
+
+.animacion__area1{
+    grid-column: 1;
+    background-image: url("../img/imagen2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center; 
+}
+
+.animacion__area1 h3{
+    font-family: "Open Sans", Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 50px;
+    color: white;
+    align-self: center;
+    margin-bottom: 150px;
+    grid-column: 2;
+    animation: animacion;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; 
+}
+
+.animacion__area2{
+    padding: 30px 50px;
+    text-align: center;
+}
+
+.animacion__area2 p{
+    margin-top: 20px;
+    text-align: justify;
+}
+
+@keyframes animacion {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.25;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.75;
+    }
+    100%{
+        opacity: 1;
+    }
 }
