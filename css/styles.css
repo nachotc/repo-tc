@@ -1,29 +1,198 @@
-#header{
-    background: rgba(41, 41, 41, 0.6);
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-.header__logo{
-    margin: 5px 50px;
-    padding: 10px;
-    font-family: "Open Sans", Arial, sans-serif;
-    text-transform: uppercase;
-    font-size: 24px;
-    align-self: center;
+
+.banner{
+    background-image: url("../img/imagen.jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+}
+
+#header {
+    position: sticky;
+    z-index: 999;
+    top: 0; /*SE AGREGA TOP 0 PARA QUE SE MANTENGA AL SCROLLEAR */
+    background: rgba(41, 41, 41, 0.6);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
 .header__nav{
-    font-family: "Open Sans", Arial, sans-serif;
-    text-transform: uppercase;
-    font-size: 20px;
+    margin: auto;
 }
 
+.header__nav ul{
+    list-style: none;
+    padding: 10px;
+    display: flex;
+}
+
+.header__nav ul li a{
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 0px 5px 0px;
+    padding: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    color: white;
+}
+
+.header__logo{
+    display: none;
+}
+
+#footer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: auto;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.footer__area1{
+    margin: 5px 0px;
+    grid-column: 1;
+    border-right: solid 1px black;
+    height: 100px;
+}
+
+.footer__area2{
+    margin: 5px 0px;
+    grid-column: 2;
+    height: 100px;
+}
+
+.footer__nav{
+    list-style: none;
+    text-decoration: none;
+}
+
+.footer__img{
+    width: 40px;
+    height: 32px;
+}
+
+.formulario{
+    background: rgba(41, 41, 41, 0.6);
+    border-radius: 2px;
+    padding-top: 10px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 450px;
+    position: relative;
+}
+
+.container.formulario h2{
+    margin-bottom: 10px;
+    color: white;
+}
+
+.container.formulario label{
+    color: white;
+    margin-top: 2px;
+}
+.col-md-12.boton_enviar{
+    margin-top: 10px;
+}
+.tabla{
+    padding: 2px;
+    overflow-x: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.tabla th{
+    background-color: #04AA6D;
+    color: white;
+    font-size: 20px;
+    padding: 0 5px 0 5px;
+}
+
+.tabla td{
+    padding: 5px;
+    text-align: center;
+}
+
+tr:hover {background-color: #04AA6D;}
+
+.container__tabla{
+    margin-top: 30px;
+
+}
+
+.section__texto, .section__tabla{
+    margin-top: 40px;
+}
+
+.banner__text{
+    display: flex;
+    justify-content: center;
+    margin-top: 144px;
+    height: 300px;
+}
+.banner__text-mensaje{
+    color: white;
+    font-size: 100px;
+}
+@media (min-width: 768px){
+    .header__logo{
+        display: block;
+        margin: 5px 50px;
+        padding: 10px;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        font-size: 24px;
+        color: white;
+        align-self: center;
+    }
+    .header__nav{
+        margin-right: 50px;
+    }
+
+    .formulario{
+        margin: 50px auto;
+        width: 420px;
+        position: relative;
+    }
+}
+
+
+.banner__button{
+    position: absolute;
+    margin: 200px 50%;
+}
+
+.banner__button-style{ 
+    background-color: #4CAF50;
+    border: 1px solid black;
+    border-radius: 9px;
+    width: 100px;
+    height: 40px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+.banner__button-style:hover{
+    background-color: white;
+    color: #4CAF50;
+}
+
+
+
 .gradiente{
-    margin-top: 65px;
     display: flex;
     height: 200px;
     justify-content: center;
     border: 2px solid black;
     background-image: linear-gradient(73.1deg,  rgba(34,126,34,1) 8%, rgba(99,162,17,1) 86.9% );
 }
+
 .gradiente h2{
     align-self: center;
     font-family: "Open Sans", Arial, sans-serif;
@@ -85,15 +254,4 @@
     100%{
         opacity: 1;
     }
-}
-.formulario{
-    margin-top: 101px;
-}
-
-.container.formulario h2{
-    margin-bottom: 10px;
-}
-
-.col-md-12.boton_enviar{
-    margin-top: 10px;
 }
