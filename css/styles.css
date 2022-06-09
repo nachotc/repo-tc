@@ -135,7 +135,7 @@ tr:hover {background-color: #04AA6D;}
     display: flex;
     justify-content: center;
     margin-top: 144px;
-    height: 300px;
+    height: 85px;
 }
 .banner__text-mensaje{
     color: white;
@@ -162,7 +162,7 @@ tr:hover {background-color: #04AA6D;}
         position: relative;
     }
 }
-
+/* 
 
 .banner__button{
     position: absolute;
@@ -255,3 +255,4 @@ tr:hover {background-color: #04AA6D;}
         opacity: 1;
     }
 }
+ */
