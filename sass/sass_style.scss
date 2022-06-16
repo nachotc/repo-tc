@@ -2,6 +2,26 @@ $color_boton: #4CAF50;
 $borde_boton: 1px solid black;
 $transicion: 0.5s;
 
+$colores:(
+    cool_white: #F9F7F2,
+    cool_green: #57BE6C
+);
+
+@mixin flex_center_size {
+    display: flex;
+    justify-content: center;
+    margin-top: 144px;
+    height: 85px;
+}
+
+.boton__registro{
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin: 5px;
+    border: 1px solid black;
+    text-align: center;
+}
+
 .banner__button{
     margin: 100px 50%;
 
@@ -11,7 +31,7 @@ $transicion: 0.5s;
         border: $borde_boton;
         border-radius: 9px;
         cursor: pointer;
-        background-color: $color_boton;
+        background-color: map-get($colores, cool_green);
         transition-duration: 0.5s;
 
         &:hover{
@@ -37,4 +57,43 @@ $transicion: 0.5s;
 
        
     }
+}
+
+#registro{
+    display: flex;
+    justify-content: center;
+
+    form {
+
+        border: solid 1px map-get($colores, cool_green);
+        padding: 10px;
+        margin-top: 10px;
+
+        div{
+            margin-top: 5px;
+        }
+        label{
+            display: flex;
+        }
+    }
+}
+.registro__banner{
+    @include flex_center_size;
+
+    h2{
+        color:  map-get($colores, cool_white);
+        font-size: 100px;
+    }
+}
+
+.botonesRegistro{
+    @extend .boton__registro;
+    background-color: map-get($colores, cool_green);
+    color:  map-get($colores, cool_white);
+}
+
+
+.botonCancelar{
+    @extend .boton__registro;
+    color: black;
 }

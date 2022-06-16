@@ -1,3 +1,11 @@
+.boton__registro, .botonesRegistro, .botonCancelar {
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin: 5px;
+  border: 1px solid black;
+  text-align: center;
+}
+
 .banner__button {
   margin: 100px 50%;
 }
@@ -8,7 +16,7 @@
   border: 1px solid black;
   border-radius: 9px;
   cursor: pointer;
-  background-color: #4CAF50;
+  background-color: #57BE6C;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
 }
@@ -33,5 +41,55 @@
 
 .banner__button .banner__button-style a:hover {
   color: #4CAF50;
+}
+
+#registro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#registro form {
+  border: solid 1px #57BE6C;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+#registro form div {
+  margin-top: 5px;
+}
+
+#registro form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.registro__banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 144px;
+  height: 85px;
+}
+
+.registro__banner h2 {
+  color: #F9F7F2;
+  font-size: 100px;
+}
+
+.botonesRegistro {
+  background-color: #57BE6C;
+  color: #F9F7F2;
+}
+
+.botonCancelar {
+  color: black;
 }
 /*# sourceMappingURL=sass_style.css.map */
