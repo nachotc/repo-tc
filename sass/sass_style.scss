@@ -4,7 +4,8 @@ $transicion: 0.5s;
 
 $colores:(
     cool_white: #F9F7F2,
-    cool_green: #57BE6C
+    cool_green: #57BE6C,
+
 );
 
 @mixin flex_center_size {
@@ -14,11 +15,139 @@ $colores:(
     height: 85px;
 }
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+#header {
+    position: sticky;
+    z-index: 999;
+    top: 0; /*SE AGREGA TOP 0 PARA QUE SE MANTENGA AL SCROLLEAR */
+    background: rgba(41, 41, 41, 0.6);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    .header__nav{
+        margin: auto;
+    }
+    
+    .header__nav ul{
+        list-style: none;
+        padding: 10px;
+        display: flex;
+    }
+    
+    .header__nav ul li a{
+        text-decoration: none;
+        display: inline-block;
+        margin: 5px 0px 5px 0px;
+        padding: 10px;
+        font-family: 'Source Sans Pro', sans-serif;
+        text-transform: uppercase;
+        color: white;
+    }
+    
+    .header__logo{
+        display: none;
+    }
+
+}
+
+/*index*/
+.banner{
+    background-image: url("../img/imagen.jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+
+    .banner__text{
+        display: flex;
+        justify-content: center;
+        margin-top: 144px;
+        height: 85px;
+    
+        .banner__text-mensaje{
+            color: white;
+            font-size: 100px;
+        }
+    }
+
+}
+
+
+/*PÁGINA DE CONTACTO - formulario*/
+.formulario{
+    background: rgba(41, 41, 41, 0.6);
+    border-radius: 2px;
+    padding-top: 10px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 450px;
+    position: relative;
+}
+
+.container.formulario{
+    h2{
+        margin-bottom: 10px;
+        color: white;
+    }
+    label{
+        color: white;
+        margin-top: 2px; 
+    }
+}
+.col-md-12.boton_enviar{
+    margin-top: 10px;
+}
+/*-------------------------------*/
+
+/*PAGINA DETALLES - TABLA*/
+.tabla{
+    padding: 2px;
+    overflow-x: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    th{
+        background-color: #04AA6D;
+        color: white;
+        font-size: 20px;
+        padding: 0 5px 0 5px;
+    }
+
+    td{
+        padding: 5px;
+        text-align: center;
+    }
+
+    tr{
+        &:hover{
+            background-color: map-get($colores , cool_green );
+        }
+    }
+}
+
+.container__tabla{
+    margin-top: 30px;
+
+    .section__texto, .section__tabla{
+        margin-top: 40px;
+    }
+}
+
+/*-------------------------------*/
+
 .boton__registro{
     padding: 2px 5px;
     border-radius: 3px;
     margin: 5px;
-    border: 1px solid black;
+    border: 2px solid black;
     text-align: center;
 }
 
@@ -92,8 +221,31 @@ $colores:(
     color:  map-get($colores, cool_white);
 }
 
-
 .botonCancelar{
     @extend .boton__registro;
     color: black;
+}
+
+@media only screen and (min-width: 768px){
+    #header{
+        .header__logo{
+            display: block;
+            margin: 5px 50px;
+            padding: 10px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            font-size: 24px;
+            color: white;
+            align-self: center;
+        }
+        .header__nav{
+            margin-right: 50px;
+        }
+    }
+
+    .formulario{
+        margin: 50px auto;
+        width: 420px;
+        position: relative;
+    }
 }
