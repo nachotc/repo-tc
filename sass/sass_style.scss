@@ -72,13 +72,25 @@ $colores:(
     
         .banner__text-mensaje{
             color: white;
-            font-size: 100px;
+            font-size: 45px;
         }
     }
 
 }
 
 
+.banner-Secundario{
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    .banner-Secundario__imagen{
+        grid-column: 1;
+
+        img{
+            width: 100%;
+        }
+    }
+}
 /*PÁGINA DE CONTACTO - formulario*/
 .formulario{
     background: rgba(41, 41, 41, 0.6);
@@ -226,6 +238,62 @@ $colores:(
     color: black;
 }
 
+/* about */
+.product-card {
+    width: 380px;
+    position: relative;
+    box-shadow: 0 2px 7px #dfdfdf;
+    margin: 30px auto;
+    background: #fafafa;
+
+    .product-tumb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 450px;
+        padding: 50px;
+        background: #f0f0f0;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .product-details {
+        padding: 30px;
+        border-top: 1px solid black;
+
+        p {
+            font-size: 15px;
+            line-height: 22px;
+            margin-bottom: 18px;
+            color: #999;
+            text-align: justify;
+        }
+
+        h4{
+            a{
+                font-weight: 500;
+                display: block;
+                margin-bottom: 18px;
+                text-transform: uppercase;
+                color: #363636;
+                text-decoration: none;
+                transition: 0.3s; 
+                
+                &:hover{
+                    color: red;
+                }
+            }
+
+
+        }
+    }
+
+
+	
+}
+
 @media only screen and (min-width: 768px){
     #header{
         .header__logo{
@@ -242,10 +310,28 @@ $colores:(
             margin-right: 50px;
         }
     }
+    .banner{    
+        .banner__text{
+            .banner__text-mensaje{
+                font-size: 100px;
+            }
+        }
+    
+    }
 
     .formulario{
         margin: 50px auto;
         width: 420px;
         position: relative;
     }
+
+    .staff-cards{
+        display: flex;
+    }
+
+
 }
+
+
+
+

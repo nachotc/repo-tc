@@ -70,7 +70,23 @@
 
 .banner .banner__text .banner__text-mensaje {
   color: white;
-  font-size: 100px;
+  font-size: 45px;
+}
+
+.banner-Secundario {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+}
+
+.banner-Secundario .banner-Secundario__imagen {
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+.banner-Secundario .banner-Secundario__imagen img {
+  width: 100%;
 }
 
 /*PÁGINA DE CONTACTO - formulario*/
@@ -229,6 +245,63 @@
   color: black;
 }
 
+/* about */
+.product-card {
+  width: 380px;
+  position: relative;
+  -webkit-box-shadow: 0 2px 7px #dfdfdf;
+          box-shadow: 0 2px 7px #dfdfdf;
+  margin: 30px auto;
+  background: #fafafa;
+}
+
+.product-card .product-tumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 450px;
+  padding: 50px;
+  background: #f0f0f0;
+}
+
+.product-card .product-tumb img {
+  width: 100%;
+}
+
+.product-card .product-details {
+  padding: 30px;
+  border-top: 1px solid black;
+}
+
+.product-card .product-details p {
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 18px;
+  color: #999;
+  text-align: justify;
+}
+
+.product-card .product-details h4 a {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  color: #363636;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.product-card .product-details h4 a:hover {
+  color: red;
+}
+
 @media only screen and (min-width: 768px) {
   #header .header__logo {
     display: block;
@@ -245,10 +318,18 @@
   #header .header__nav {
     margin-right: 50px;
   }
+  .banner .banner__text .banner__text-mensaje {
+    font-size: 100px;
+  }
   .formulario {
     margin: 50px auto;
     width: 420px;
     position: relative;
+  }
+  .staff-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 /*# sourceMappingURL=sass_style.css.map */
