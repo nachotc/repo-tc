@@ -81,16 +81,82 @@ $colores:(
 
 .banner-Secundario{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
+    height: 300px;
 
     .banner-Secundario__imagen{
-        grid-column: 1;
+        display: none;
+    }
 
-        img{
-            width: 100%;
+    .banner-Secundario__texto{
+        grid-column: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 70px;
+        height: 95px;
+
+        .banner-Secundario__texto-Style{
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #363636;
+            margin-bottom: 20px;
+        }
+
+        p{
+            text-align: justify;
+            margin: 5px 10px;
+        }
+
+        .banner-Secundario__button{
+            text-decoration: none;
+            background-color: transparent;
+            color: #3c3c3c;
+            border: 2px solid #c52525;
+            padding: 15px 40px;
+            border-radius: 5px;
+            display: inline-block;
+            text-transform: uppercase;
+            margin-top: 20px;
         }
     }
 }
+
+.banner-Motiv{
+    height: 350px;
+    background-color: rgb(199, 199, 199);
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    img{
+        height: auto;
+    }
+}
+
+.banner-Planes{
+    display: none;
+}
+
+
+.banner-map{
+    display: flex;
+    height: 450px;
+    margin: 0px 30px;
+    .banner-map__info{
+        margin: 50px 150px;
+        h2{
+            text-transform: uppercase;
+            font-family: 'Source Sans Pro', sans-serif;
+            
+        }
+    }
+    map{
+        display: none;
+    }
+}
+
 /*PÁGINA DE CONTACTO - formulario*/
 .formulario{
     background: rgba(41, 41, 41, 0.6);
@@ -125,6 +191,7 @@ $colores:(
     overflow-x: auto;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 
     th{
         background-color: #04AA6D;
@@ -239,59 +306,63 @@ $colores:(
 }
 
 /* about */
-.product-card {
-    width: 380px;
-    position: relative;
-    box-shadow: 0 2px 7px #dfdfdf;
-    margin: 30px auto;
-    background: #fafafa;
 
-    .product-tumb {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 450px;
-        padding: 50px;
-        background: #f0f0f0;
+.staff-cards{
+    font-family: 'Roboto', sans-serif;
+    .product-card {
+        width: 380px;
+        position: relative;
+        box-shadow: 0 2px 7px #dfdfdf;
+        margin: 30px auto;
+        background: #fafafa;
 
-        img {
-            width: 100%;
-        }
-    }
+        .product-tumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 450px;
+            padding: 50px;
+            background: #f0f0f0;
 
-    .product-details {
-        padding: 30px;
-        border-top: 1px solid black;
-
-        p {
-            font-size: 15px;
-            line-height: 22px;
-            margin-bottom: 18px;
-            color: #999;
-            text-align: justify;
+            img {
+                width: 100%;
+            }
         }
 
-        h4{
-            a{
-                font-weight: 500;
-                display: block;
+        .product-details {
+            padding: 30px;
+            border-top: 1px solid black;
+
+            p {
+                font-size: 15px;
+                line-height: 22px;
                 margin-bottom: 18px;
-                text-transform: uppercase;
-                color: #363636;
-                text-decoration: none;
-                transition: 0.3s; 
-                
-                &:hover{
-                    color: red;
-                }
+                color: #999;
+                text-align: justify;
             }
 
+            h4{
+                a{
+                    font-weight: 500;
+                    display: block;
+                    margin-bottom: 18px;
+                    text-transform: uppercase;
+                    color: #363636;
+                    text-decoration: none;
+                    transition: 0.3s; 
+                    
+                    &:hover{
+                        color: red;
+                    }
+                }
 
+
+            }
         }
+
+
+        
     }
-
-
-	
 }
 
 @media only screen and (min-width: 768px){
@@ -318,6 +389,64 @@ $colores:(
         }
     
     }
+
+    .banner-Secundario{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: 450px;
+    
+        .banner-Secundario__imagen{
+            display: block; 
+            grid-column: 1;
+            img{
+                width: 100%;
+            }
+        }
+        .banner-Secundario__texto{
+            margin-top: 100px;
+            grid-column: 2;
+
+            p,.banner-Secundario__button{
+                margin-top: 20px;
+            }
+        }
+    
+    }
+
+    .banner-Planes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px;
+
+        h2{
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .banner-Planes__button{
+            text-decoration: none;
+            background-color: transparent;
+            color: #3c3c3c;
+            border: 2px solid #c92f96;
+            padding: 15px 40px;
+            border-radius: 5px;
+            display: inline-block;
+            text-transform: uppercase;
+            margin-top: 20px;
+        }
+    }
+
+    .banner-map{
+        .map{
+           display: block; 
+           width: 100%;
+           border: 0;
+        }
+    }
+    
 
     .formulario{
         margin: 50px auto;

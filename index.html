@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Empresa, pagina web, detalles, contacto, registro">
-    <meta name="description" content="Index de la página web de la empresa">
-    <title>Inicio</title>
+    <meta name="keywords" content="Panda, Gimnasio, Entrenamiento, Fitness, Deporte">
+    <meta name="description" content="Sitio web del gimnasio Panda">
+    <title>Panda</title>
+    <link rel="shortcut icon" href="./img/panda.png" type="image/x-icon"> <!-- IMAGEN DE PESTEÑA -->
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
@@ -21,7 +22,7 @@
   
     <div class="banner">
         <header id="header">
-            <p class="header__logo">LOGO</p>
+            <p class="header__logo">PANDA</p>
             <nav class="header__nav">
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -49,9 +50,40 @@
         <div class="banner-Secundario__imagen">
             <img src="./img/banner.jpg" alt="pesas rusas" class="banner-Secundario__imagen-Style">
         </div>
-        <div class="banner-Secundario__texto"></div>
+        <div class="banner-Secundario__texto">
+            <H2 class="banner-Secundario__texto-Style">CONOCENOS</H2>
+            <p>Échale un vistazo a nuestra historia. Conoce también el equipo involucrado en este proyecto!</p>
+            <a href="./paginas/about.html" class="banner-Secundario__button">About</a>
+        </div>
     </div>
     
+    <div class="banner-Motiv">
+        <img src="./img/banner-motiv.jpg" alt="Motivación, entrenamiento, pesas">
+    </div>
+
+    <div class="banner-Planes">
+        <h2>Enterate de nuestros Planes</h2>
+        <p>Elegí el plan que más se adapte a vos</p>
+        <a href="./paginas/detalles.html" class="banner-Planes__button">Planes</a>
+
+    </div>
+
+    <div class= "banner-map">    
+        <div class="banner-map__info">
+            <h2>encontranos</h2>
+            <dl>
+                <dt>Redes Sociales</dt>
+                <dd>instagram.com/pandagym</dd>
+                <dd><a href="https://open.spotify.com/playlist/0SdDC3VklLUe8y44X1Z6Qx">spotify.com/pandagym_plylist</a></dd>
+                <dt>Dirección</dt>
+                <dd>Calle 67 1172, La Plata, BS.AS</dd>
+                <dt>Numero de Contacto</dt>
+                <dd>+54 9 221 627 2022</dd>
+            </dl>
+        </div>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.757156736386!2d-57.945124299999996!3d-34.9376269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e890a8bccead%3A0xe261fadd3f157e07!2sC.%2067%201172%2C%20B1904AXV%20La%20Plata%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1657477141067!5m2!1ses-419!2sar" class ="map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
     <div class="container"> <!-- Footer aplicando bootstrap -->
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
           <p class="col-md-4 mb-0 text-muted">Torres Collivadino, Coderhouse 2022</p>
