@@ -70,7 +70,7 @@
 
 .banner .banner__text .banner__text-mensaje {
   color: white;
-  font-size: 45px;
+  font-size: 35px;
 }
 
 .banner-Secundario {
@@ -130,22 +130,6 @@
   margin-top: 20px;
 }
 
-.banner-Motiv {
-  height: 350px;
-  background-color: #c7c7c7;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 15px;
-}
-
-.banner-Motiv img {
-  height: auto;
-}
-
 .banner-Planes {
   display: none;
 }
@@ -156,10 +140,13 @@
   display: flex;
   height: 450px;
   margin: 0px 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .banner-map .banner-map__info {
-  margin: 50px 150px;
+  margin: 50px 50px;
 }
 
 .banner-map .banner-map__info h2 {
@@ -406,14 +393,14 @@
     margin-right: 50px;
   }
   .banner .banner__text .banner__text-mensaje {
-    font-size: 100px;
+    font-size: 80px;
   }
   .banner-Secundario {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
-    height: 450px;
+    height: 350px;
   }
   .banner-Secundario .banner-Secundario__imagen {
     display: block;
@@ -442,7 +429,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 30px;
+    margin: 10px 0px 30px 0px;
   }
   .banner-Planes h2 {
     font-family: 'Montserrat', sans-serif;
@@ -461,11 +448,6 @@
     text-transform: uppercase;
     margin-top: 20px;
   }
-  .banner-map .map {
-    display: block;
-    width: 100%;
-    border: 0;
-  }
   .registro__banner h2 {
     font-size: 100px;
   }
@@ -478,6 +460,20 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .banner-Secundario {
+    height: 450px;
+  }
+  .banner-map .map {
+    display: block;
+    width: 100%;
+    border: 0;
+  }
+  .banner .banner__text .banner__text-mensaje {
+    font-size: 100px;
   }
 }
 /*# sourceMappingURL=sass_style.css.map */

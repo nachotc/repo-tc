@@ -72,7 +72,7 @@ $colores:(
     
         .banner__text-mensaje{
             color: white;
-            font-size: 45px;
+            font-size: 35px;
         }
     }
 
@@ -124,17 +124,6 @@ $colores:(
     }
 }
 
-.banner-Motiv{
-    height: 350px;
-    background-color: rgb(199, 199, 199);
-    display: flex;
-    justify-content: center;
-    margin: 15px;
-    img{
-        height: auto;
-    }
-}
-
 .banner-Planes{
     display: none;
 }
@@ -144,12 +133,12 @@ $colores:(
     display: flex;
     height: 450px;
     margin: 0px 30px;
+    justify-content: center;
     .banner-map__info{
-        margin: 50px 150px;
+        margin: 50px 50px;
         h2{
             text-transform: uppercase;
-            font-family: 'Source Sans Pro', sans-serif;
-            
+            font-family: 'Source Sans Pro', sans-serif;  
         }
     }
     .map{
@@ -384,7 +373,7 @@ $colores:(
     .banner{    
         .banner__text{
             .banner__text-mensaje{
-                font-size: 100px;
+                font-size: 80px;
             }
         }
     
@@ -393,7 +382,7 @@ $colores:(
     .banner-Secundario{
         display: grid;
         grid-template-columns: 50% 50%;
-        height: 450px;
+        height: 350px;
     
         .banner-Secundario__imagen{
             display: block; 
@@ -417,7 +406,7 @@ $colores:(
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 30px;
+        margin: 10px 0px 30px 0px;
 
         h2{
             font-family: 'Montserrat', sans-serif;
@@ -439,15 +428,7 @@ $colores:(
         }
     }
 
-    .banner-map{
-        .map{
-           display: block; 
-           width: 100%;
-           border: 0;
-        }
-    }
     .registro__banner{
-    
         h2{
          font-size: 100px;
         }
@@ -466,6 +447,25 @@ $colores:(
 
 }
 
+@media only screen and (min-width: 1024px){
+    .banner-Secundario{
+        height: 450px;
+    }
 
-
+    .banner-map{
+        .map{
+           display: block; 
+           width: 100%;
+           border: 0;
+        }
+    }
+    .banner{    
+        .banner__text{
+            .banner__text-mensaje{
+                font-size: 100px;
+            }
+        }
+    
+    }
+}
 
